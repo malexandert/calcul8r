@@ -1,6 +1,7 @@
 var previous_value = "0"
 var operation = "+"
 var operationPerformed = true;
+var spookinessEnabled = false;
 
 
 
@@ -20,12 +21,11 @@ function resetInput() {
 	operationPerformed = true;
 }
 
-function toggleSong() {
-	if (document.getElementById("2spooky").paused) {
-		document.getElementById("2spooky").play();
-	} else {
-		document.getElementById("2spooky").pause();
-	}
+function enableSpooky() {
+	document.title = "A SPOOKY calculator!";
+	document.getElementById("spooky-1").style.visibility = "visible";
+	document.getElementById("spooky-2").style.visibility = "visible";
+	document.getElementById("2spooky").play();
 }
 
 function processInput(input_key) {
@@ -52,6 +52,7 @@ function processInput(input_key) {
 			break;
 		case "=":
 			performOperation();
+			if (!spookinessEnabled) enableSpooky();
 			resetInput();
 			break;
 		case "c":

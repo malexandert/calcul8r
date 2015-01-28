@@ -64,10 +64,12 @@ button {
 	display: table-cell;
 }
 
-.spooky-1 {
+#spooky-1 {
+	visibility: hidden;
 	height: 230px;
 }
 
-.spooky-2 {
+#spooky-2 {
+	visibility: hidden;
 	height: 230px;
 }
