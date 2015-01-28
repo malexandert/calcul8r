@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8"/>
+	<title>Click on the skellingtons!</title>
+
+	<link href="css/calculator.css" rel="stylesheet">
+	<script src="js/calculator.js"></script>
+</head>
+
+<body>
+	<div id="calculator-face" class="calculator-face">0</div>
+
+	<audio id="2spooky" controls loop>
+		<source src="audio/2spooky.mp3" type="audio/mpeg">
+	</audio>
+
+	<div class="button-rows">
+		<ul class="button-row-1">
+			<li>
+				<button type="button" class="num first" onclick="processInput(7)">7</button>		
+			</li>
+			<li>
+				<button type ="button" class="num" onclick="processInput(8)">8</button>
+			</li>
+			<li>
+				<button type="button" class="num" onclick="processInput(9)">9</button>
+			</li>
+			<li>
+				<button type="button" class="operator last" onclick="processInput('+')">&plus;</button>
+			</li>
+		</ul>
+		<ul class="button-row-2">
+			<li>
+				<button type="button" class="num first" onclick="processInput(4)">4</button>
+			</li>
+			<li>
+				<button type="button" class="num" onclick="processInput(5)">5</button>
+			</li>
+			<li>
+				<button type="button" class="num" onclick="processInput(6)">6</button>
+			</li>
+			<li>
+				<button type="button" class="operator last" onclick="processInput('-')">&minus;</button>
+			</li>
+		</ul>
+		<ul class="button-row-3">
+			<li>
+				<button type="button" class="num first" onclick="processInput(1)">1</button>
+			</li>
+			<li>
+				<button type="button" class="num" onclick="processInput(2)">2</button>
+			</li>
+			<li>
+				<button type="button" class="num" onclick="processInput(3)">3</button>
+			</li>
+			<li>
+				<button type="button" class="operator last" onclick="processInput('x')">&times;</button>
+			</li>
+		</ul>
+		<ul class="button-row-4">
+			<li>
+				<button type="button" class="num first" onclick="processInput(0)">0</button>
+			</li>
+			<li>
+				<button type="button" class="operator" onclick="processInput('=')">&equals;</button>
+			</li>
+			<li>
+				<button type="button" class="operator" onclick="processInput('/')">&divide;</button>
+			</li>
+			<li>
+				<button type="button" class="operator last" onclick="processInput('c')">C</button>
+			</li>
+		</ul>
+	</div>
+	<div class="2spooky">
+		<ul class="spooky-scary">
+			<li>
+				<img class="spooky-1" src="img/spooky-1.gif" onclick="toggleSong()">
+			</li>
+			<li>
+				<img class="spooky-2" src="img/spooky-2.gif" onclick="toggleSong()">
+			</li>
+		</ul>
+	</div>
+</body>
